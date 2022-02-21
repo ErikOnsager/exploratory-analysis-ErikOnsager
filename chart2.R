@@ -5,13 +5,20 @@ sat_data <- read.csv("https://raw.githubusercontent.com/info-201b-wi22/explorato
 
 sat_data <- sat_data %>% mutate(average_total_score = Average.Score..SAT.Math. + Average.Score..SAT.Reading. + Average.Score..SAT.Writing.)
 sat_data <- sat_data %>% mutate(each_race_tested = Percent_White + Percent_Asian + Percent_Black + Percent_Hispanic)
-each_race_tested
 
+sat_data$Percent.White <- gsub("%$", "", sat_data$Percent.White)
+sat_data$Percent.Asian <- gsub("%$", "", sat_data$Percent.Asian)
+sat_data$Percent.Black <- gsub("%$", "", sat_data$Percent.Black)
+sat_data$Percent.Hispanic <- gsub("%$", "", sat_data$Percent.Hispanic)
 sat_data$Percent.Tested <- gsub("%$", "", sat_data$Percent.Tested)
+sat_data$Percent.White <- as.numeric(sat_data$Percent.White)
+sat_data$Percent.Asian <- as.numeric(sat_data$Percent.Asian)
+sat_data$Percent.Black <- as.numeric(sat_data$Percent.Black)
+sat_data$Percent.Hispanic <- as.numeric(sat_data$Percent.Hispanic)
 sat_data$Percent.Tested <- as.numeric(sat_data$Percent.Tested)
 
-Race_Tested <- sat_data$each_race_tested
 Percent_Tested <- sat_data$Percent.Tested
+Race_Tested <- sat_data$each_race_tested
 Average_Score <- sat_data$average_total_score
 
 ggplot(data = sat_data,mapping = aes(x = Race_Tested, y = Average_Score)) +
