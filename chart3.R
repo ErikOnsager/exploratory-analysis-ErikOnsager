@@ -13,7 +13,7 @@ Average_Score <- sat_data$average_total_score
 
 ggplot(data = sat_data, mapping = aes(x = Student_Enrollment, y = Average_Score)) +
   geom_line() +
-  labs(x = "\n Student Enrollment", y = "Average Score \n", title = "Student Enrollment vs Average Score \n") +
+  labs(x = "\n Student Enrollment", y = "Average Score \n", title = "Average SAT Score per Student Enrollment \n") +
   theme(plot.title = element_text(hjust = 0), 
         axis.title.x = element_text(color="black", size = 10),
         axis.title.y = element_text(color="black", size = 10))
