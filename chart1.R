@@ -6,10 +6,10 @@ sat_data <- sat_data %>% mutate(average_total_score = Average.Score..SAT.Math. +
 
 sat_data$Percent.Tested <- gsub("%$", "", sat_data$Percent.Tested)
 sat_data$Percent.Tested <- as.numeric(sat_data$Percent.Tested)
-Percent_Tested <- sat_data$Percent.Tested
-Average_Score <- sat_data$average_total_score
+`Percent Tested` <- sat_data$Percent.Tested
+`Average Score` <- sat_data$average_total_score
 
 library(ggplot2)
 ggplot() +
-  geom_point(aes(x = Percent_Tested, y = Average_Score))
+  geom_point(aes(x = `Percent Tested`, y = `Average Score`))
 

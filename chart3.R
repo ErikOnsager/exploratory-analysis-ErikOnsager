@@ -5,15 +5,14 @@ sat_data <- read.csv("https://raw.githubusercontent.com/info-201b-wi22/explorato
 
 sat_data <- sat_data %>% mutate(average_total_score = Average.Score..SAT.Math. + Average.Score..SAT.Reading. + Average.Score..SAT.Writing.)
 
-sat_data$Student.Enrollment <- gsub("%$", "", sat_data$Student.Enrollment)
-sat_data$Student.Enrollment <- as.numeric(sat_data$Student.Enrollment)
-Student_Enrollment <- sat_data$Student.Enrollment
-Average_Score <- sat_data$average_total_score
+Manhattan_data <- sat_data %>% group_by(City) %>% filter(City == "Manhattan")
+Brooklyn_data <- sat_data %>% group_by(City) %>% filter(City == "Brooklyn")
+
+Manhattan <- Manhattan_data$average_total_score
+Brooklyn <- Brooklyn_data$average_total_score
 
 
-ggplot(data = sat_data, mapping = aes(x = Student_Enrollment, y = Average_Score)) +
-  geom_line() +
-  labs(x = "\n Student Enrollment", y = "Average Score \n", title = "Average SAT Score per Student Enrollment \n") +
-  theme(plot.title = element_text(hjust = 0), 
-        axis.title.x = element_text(color="black", size = 10),
-        axis.title.y = element_text(color="black", size = 10))
+hist(Manhattan, col=rgb(1,0,0,0.5), breaks = 13, main = "Manhattan vs. Brooklyn", xlab = "Average SAT Score")
+hist(Brooklyn, col=rgb(0,0,1,0.5), add=T)
+legend(x = "topright", legend = c("Manhattan", "Brooklyn"), fill = c(rgb(1,0,0,0.5), rgb(0,0,1,0.5)))
+box()
