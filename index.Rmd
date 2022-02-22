@@ -96,12 +96,12 @@ The chart is a scatter plot that shows the average SAT score plotted against the
 ### Chart 2
 
 **Chart 2: Bar chart that shows the average SAT scores across the White students in NYC.** 
-```{r, echo = FALSE, warning = FALSE, code = readLines("chart2.R")}
+```{r, echo = FALSE, warning = FALSE, message=FALSE, code = readLines("chart2.R")}
 source("chart2.R")
 
 ```
 
-The chart is a bar plot that visualizes the average SAT scores against the White population. In this graph we can observe that there is a large percentage of white students that take the SAT examination. However, we observe as the average SAT score increases, the % of white students decreases. The White population has always had added benefits in comparison to Black populations, however have not achieved as high scores due to the negligence of the privilege they have had. Looking at the bar plot, the lowest percent of white population tested had an average SAT score of below 500. 
+The chart is a line graph that visualizes the average SAT scores against the White population. In this graph we can observe that there is a peak in the graph around a 1650 SAT score. This score is comprised by around 40% of the white population. The graph has a steady increase then plateus around the average score of 1650, which indicates the resources available to a certain extent for this population and the area they are surrounded by. However, we can see that near the maximum score, there is a small population of White students which implies they might have been negligent to their privileges, in comparison to people of colour. 
 
 ### Chart 3
 
