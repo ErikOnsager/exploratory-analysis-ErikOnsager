@@ -44,21 +44,21 @@ Studies have shown that socioeconomic factors have a significant impact on a stu
 
 ### The Dataset
 
-Where did you find the data? Please include a link to the data source
-Our team found the dataset on Kaggle at the following link: https://www.kaggle.com/nycopendata/high-schools.   
-Who collected the data?
-The data was collected by NYC Open Data, a program that makes information used by the City government available to the public for free.
-How was the data collected or generated?  
-The high school data was compiled by the New York City Department of Education. The SAT data was provided by the College Board.
-Why was the data collected?  
-The NYC DoE was inspired to answer the following questions: “Which public high school's students received the highest overall SAT score? The highest score for each section? Which borough has the highest performing schools? Do schools with lower student enrollment perform better?” 
-How many observations (rows) are in your data?
-Our data has 435 observations.
-How many features (columns) are in the data?  
-Our data has 22 features.
-What, if any, ethical questions or questions of power do you need to consider when working with this data?
-Our team will consider the following:  What communities may be inadvertently harmed by our data analysis, and how can we recognise bias in the dataset while avoiding bias ourselves?
-What are possible limitations or problems with this data?   (at least 200 words)
+**Where did you find the data? Please include a link to the data source**  
+Our team found the dataset on Kaggle at the following link: https://www.kaggle.com/nycopendata/high-schools.     
+**Who collected the data?**  
+The data was collected by NYC Open Data, a program that makes information used by the City government available to the public for free.  
+**How was the data collected or generated?**    
+The high school data was compiled by the New York City Department of Education. The SAT data was provided by the College Board.  
+**Why was the data collected?**    
+The NYC DoE was inspired to answer the following questions: “Which public high school's students received the highest overall SAT score? The highest score for each section? Which borough has the highest performing schools? Do schools with lower student enrollment perform better?”   
+**How many observations (rows) are in your data?**  
+Our data has 435 observations.  
+**How many features (columns) are in the data?**    
+Our data has 22 features.  
+**What, if any, ethical questions or questions of power do you need to consider when working with this data?**  
+Our team will consider the following:  What communities may be inadvertently harmed by our data analysis, and how can we recognise bias in the dataset while avoiding bias ourselves?  
+**What are possible limitations or problems with this data?**  
 The data only provides the average scores and the race breakdown of each school. Therefore, it does not track the race breakdown of those who took the test nor their individual scores. The comparisons are being made on solely one set of standardised scores, which limits the conclusions that can be made. Moreover, there are only 4 races noted in the data: White, Black, Hispanic, and Asian. Cross cultural generalisability cannot be performed across other states or countries to races that have not been included. A noticeable problem in the data set is that some of the schools have missing information about SAT scores or race breakdowns. This limits the conclusions that can be drawn from the data since it has a broad scope but with gaps in the dataset. Another possible limitation is that the gender is not identified, which can be another cause of bias in the results. For instance, gender bias is a definite issue that can interfere with the data and cause skewing. To avoid such limitations, it is important for the dataset to be cleansed and erased of possibly biased numbers.
 
 ### Implications
@@ -76,31 +76,39 @@ Analysis that we conducted showed that the mean SAT score among all the boroughs
 ### Table
 
 Here is a table of the Average SAT scores conducted from multiple cities, racial groups and enrollment numbers in New York City public schools between the year 2014 - 2015: 
-```{r echo = FALSE}
+```{r echo = FALSE, message=FALSE}
 source("table.R")
-kable(top.each.city)
+kable(top.each.city) %>% kable_styling(bootstrap_options = "striped", full_width = F)
 ```
 The table provides information that is useful to understand how race and location play a role in average student SAT scores. The table is organized by city names and the divide between the White, Black, Hispanic and Asian population represents which group has the easiest access to test taking within their schools and areas. It is evident from the data that Asians are among the top test takers regardless of the location, which highlights the current stigma in minds that push Asians and STEM work together stronger than other races. Furthermore, the data set identified the cities within NYC that had especially higher / lower student enrollment rates. We used online research in coalition to understand how higher enrollment rated locations (eg. Forest Hills, Manhattan etc.) were more city destinations than smaller neighborhoods, that could provide the schools to conduct such testing.
 
 ### Chart 1
 
-Chart 1: Average SAT Score vs % Tested (2014-2015)
-``````{r, echo = FALSE, code = readLines("chart1.R")}
+```{r, echo = FALSE, warning = FALSE, code = readLines("chart1.R")}
 source("chart1.R")
 ggplot() +
-  geom_point(aes(x = Percent_Tested, y = Average_Score))
+  geom_point(aes(x = Percent_Tested, y = Average_Score)) +
+  labs(x = "% of Students Tested", y = "Average Score", title = "Average SAT Score vs % of Students Tested between 2014 - 2015 in NYC")
 ```
-The chart is a scatter plot that shows the average SAT score plotted against the % of students tested among all areas in New York City. There is an evident positive correlation between the number of students tested and the average SAT score. The higher the % of test takers in an area, the higher the SAT score which signifies how some locations can provide students resources that can improve their performances.  
+
+The chart is a scatter plot that shows the average SAT score plotted against the % of students tested among all areas in New York City. There is an evident positive correlation between the number of students tested and the average SAT score. The higher the % of test takers in an area, the higher the SAT score which signifies how some locations can provide students resources that can improve their performance. This makes sense in the real world if we analyze the different locations in New York City as the city has students from both developed and undeveloped neighborhoods. Therefore, if student accessibility to schools or centers with testing sites increases, students can can repeatedly get the lessons they need to get increase their average score.            
 
 ### Chart 2
-``````{r, echo = FALSE, code = readLines("chart2.R")}
-source("chart2.R")
 
-```
+**Chart 2: ** 
+
 
 
 ### Chart 3
 
-Include a chart
+```{r, echo = FALSE, warning = FALSE, code = readLines("chart3.R")}
+source("chart3.R")
+ggplot(data = sat_data, mapping = aes(x = Student_Enrollment, y = Average_Score)) +
+  geom_line() +
+  labs(x = "\n Student Enrollment", y = "Average Score \n", title = "Average SAT Score per Student Enrollment between 2014 - 2015 in NYC \n") +
+  theme(plot.title = element_text(hjust = 0), 
+        axis.title.x = element_text(color="black", size = 10),
+        axis.title.y = element_text(color="black", size = 10))
+```
 
-Describe why you chose this chart and what information it reveals
+The chart is a scatter plot that shows a graph of the Average Score versus Student Enrollment rates. 

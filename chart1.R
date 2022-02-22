@@ -11,5 +11,6 @@ Average_Score <- sat_data$average_total_score
 
 library(ggplot2)
 ggplot() +
-  geom_point(aes(x = Percent_Tested, y = Average_Score))
+  geom_point(aes(x = Percent_Tested, y = Average_Score)) +
+  labs(x = "% of Students Tested", y = "Average Score", title = "Average SAT Score vs % of Students Tested between 2014 - 2015 in NYC")
 
