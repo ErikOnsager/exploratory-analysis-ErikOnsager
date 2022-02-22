@@ -84,14 +84,13 @@ The table provides information that is useful to understand how race and locatio
 
 ### Chart 1
 
+**Chart 1: Scatter plot that shows the average SAT score vs % of students tested.**
 ```{r, echo = FALSE, warning = FALSE, code = readLines("chart1.R")}
 source("chart1.R")
-ggplot() +
-  geom_point(aes(x = Percent_Tested, y = Average_Score)) +
-  labs(x = "% of Students Tested", y = "Average Score", title = "Average SAT Score vs % of Students Tested between 2014 - 2015 in NYC")
+
 ```
 
-The chart is a scatter plot that shows the average SAT score plotted against the % of students tested among all areas in New York City. There is an evident positive correlation between the number of students tested and the average SAT score. The higher the % of test takers in an area, the higher the SAT score which signifies how some locations can provide students resources that can improve their performance. This makes sense in the real world if we analyze the different locations in New York City as the city has students from both developed and undeveloped neighborhoods. Therefore, if student accessibility to schools or centers with testing sites increases, students can can repeatedly get the lessons they need to get increase their average score.            
+The chart is a scatter plot that shows the average SAT score plotted against the % of students tested among all areas in New York City. There is an evident positive correlation between the number of students tested and the average SAT score. The higher the % of test takers in an area, the higher the SAT score which signifies how some locations can provide students resources that can improve their performance. The plot shows that the more closely the percent tested can reach a maximum of 100%, the closer the SAT score to 2100. This makes sense in the real world if we analyze the different locations in New York City as the city has students from both developed and undeveloped neighborhoods. Therefore, if student accessibility to schools or centers with testing sites increases, students can can repeatedly get the lessons they need to get increase their average score.            
 
 ### Chart 2
 
@@ -101,14 +100,10 @@ The chart is a scatter plot that shows the average SAT score plotted against the
 
 ### Chart 3
 
+**Chart 3: Histogram that shows the frequency plotted against average SAT scores of Manhattan and Brooklyn.** 
 ```{r, echo = FALSE, warning = FALSE, code = readLines("chart3.R")}
 source("chart3.R")
-ggplot(data = sat_data, mapping = aes(x = Student_Enrollment, y = Average_Score)) +
-  geom_line() +
-  labs(x = "\n Student Enrollment", y = "Average Score \n", title = "Average SAT Score per Student Enrollment between 2014 - 2015 in NYC \n") +
-  theme(plot.title = element_text(hjust = 0), 
-        axis.title.x = element_text(color="black", size = 10),
-        axis.title.y = element_text(color="black", size = 10))
+
 ```
 
-The chart is a scatter plot that shows a graph of the Average Score versus Student Enrollment rates. 
+The chart is a histogram that compares the frequency of average SAT scores to two different locations in Manhattan and Brooklyn. NYC as a whole is quite a progressive city, hence the comparison shown in the graph appears to be quite similar. We decided to analyze between locations because to a certain extent, it is a factor that produces variation in the SAT scores of students. The histogram shows that an average SAT score of around 1200 is a commonly occurring score between Manhattan and Brooklyn, represented by the purple in the key. It shows that perhaps these locations offer similar resources that can help students achieve their scores. Other parts of the graph indicate that although these locations share a large % of similarity, there is still a difference in the borough's socioeconomic population which means students might have different accessibility towards schools.  
