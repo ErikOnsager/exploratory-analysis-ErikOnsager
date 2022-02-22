@@ -5,11 +5,14 @@ output: html_document
 
 ## Project title
 
-Give your project a concise, interesting title that summarizes the entirety of your project
+SAT Stats in NYC
 
 ### Authors
 
-Names of your team members
+- Erik Onsager
+- Harshita Chandgothia
+- Emily Estrada
+- Henry James Stirrat
 
 ### Date
 
@@ -17,65 +20,84 @@ Winter 2022
 
 ### Abstract
 
-No more than three sentences that summarize your project. Focus on the very most important aspects. For example: (1) "Our main question is .... This question is important because .... To address the question, we will ...." (2) "We are concerned with ..., because .... To address this concern, we plan to ...." (3) "Consider that .... This is important because .... Accordingly, we plan to ...."
+Our main focus is questioning how the different backgrounds that students come from will affect one's performance. To address the question, we will focus on analysing the dataset of standardised testing within New York City by looking at many factors related to the diversity of students along with different factors that will help us determine how students are impacted during their testing. We are aiming to answer questions that will allow us to give others a different perspective of how students perform based on their background.
 
 ### Keywords
 
-3-5 keywords that summarize your project.
-(e.g., "Keywords: human physiology; bicycle exercise; Gen Z; times-series data")
+Keywords: SAT Scores, Socioeconomic diversity, Public highschools
 
 ### Introduction  
 
-Briefly introduce your project.  Include 3-5 research questions. What motivates the questions? Why are they important? (at least 200 words)
+Our project analyses a dataset that consists of the average SAT scores for New York City public schools during the year 2014 - 2015. We decided on this area of study because the dataset provides many columns that allow us to analyse the information with a range of data. Some research questions that we are interested in are:
+How does the cultural divide among students affect their individual scores?   
+How do the different locations (eg. columns = Borough) affect access to resources that influence students’ scores?
+How do income levels between different racial groups trigger student scores?
+Do public schools with higher enrollment numbers perform better?
+These questions spur interest because it allows us to analyse how different factors from race to location can influence a student’s scores. History has shown us how rigged such standardised systems can be, with celebrities buying scores for their children and students paying fake test takers to forge higher scores. To understand the corruption and dispersion in test scores between different students, we are motivated to analyse the sociodemographic factors that affect this.  At the end of this project, we will be able to see how public schools perform when compared to others and how New York City’s diversity plays a role in the testing numbers.
 
 ### Related Work  
 
-Describe your topic and related work in this space. You must include 3 citations to related work (URLs to similar work, high quality articles from the popular press, research papers, etc. ) Please use a standard citation style of your choice. (at least 200 words)
+AbigailJHess. “Rich Students Get Better SAT Scores-Here's Why.” CNBC, CNBC, 3 Oct. 2019, https://www.cnbc.com/2019/10/03/rich-students-get-better-sat-scores-heres-why.html.
+“Family Background Accounts for 40% of SAT/ACT Scores among UC Applicants.” Family Background Accounts for 40% of SAT/ACT Scores Among UC Applicants | Center for Studies in Higher Education, 11 May 2020, https://cshe.berkeley.edu/news/family-background-accounts-40-satact-scores-among-uc-applicants.
+Seckan, Bakary, and About The Author Bakary Seckan. “The Role of Socioeconomic Status in SAT Score, Grades and College-Admissions Decisions.” The Journalist's Resource, 17 Dec. 2020, https://journalistsresource.org/economics/ses-socioeconomic-status-sat-grade-relationships-and-in-college-admissions-decisions/.<br />
+Studies have shown that socioeconomic factors have a significant impact on a student's success on standardised tests. Coming from a higher-income family is a large advantage because there are many costs associated with getting a higher score. Taking practice tests, taking the official test multiple times, and private tutoring are all factors that can boost a student’s score but are less accessible to lower-income students. Colleges are aware of these disparities, and therefore take the disadvantages a student faces into account. That being said, there is still a pattern of the average income of accepted students being higher than that of the pool of applicants. It is important to understand the degree to which these factors affect how a student performs. There is also a disparity in which students get tested at all, as students from certain backgrounds are less likely to be encouraged to take standardised tests at all. Some schools are stepping away from standardised testing as it is difficult to reconcile the inequalities that affect test scores. Studies show that test-optional schools provide more opportunities for students who have traditionally been disadvantaged.
 
 ### The Dataset
 
-Where did you find the data? Please include a link to the data source  
-Who collected the data?  
+Where did you find the data? Please include a link to the data source
+Our team found the dataset on Kaggle at the following link: https://www.kaggle.com/nycopendata/high-schools.   
+Who collected the data?
+The data was collected by NYC Open Data, a program that makes information used by the City government available to the public for free.
 How was the data collected or generated?  
+The high school data was compiled by the New York City Department of Education. The SAT data was provided by the College Board.
 Why was the data collected?  
-How many observations (rows) are in your data?  
+The NYC DoE was inspired to answer the following questions: “Which public high school's students received the highest overall SAT score? The highest score for each section? Which borough has the highest performing schools? Do schools with lower student enrollment perform better?” 
+How many observations (rows) are in your data?
+Our data has 435 observations.
 How many features (columns) are in the data?  
-What, if any, ethical questions or questions of power do you need to consider when working with this data?  
+Our data has 22 features.
+What, if any, ethical questions or questions of power do you need to consider when working with this data?
+Our team will consider the following:  What communities may be inadvertently harmed by our data analysis, and how can we recognise bias in the dataset while avoiding bias ourselves?
 What are possible limitations or problems with this data?   (at least 200 words)
+The data only provides the average scores and the race breakdown of each school. Therefore, it does not track the race breakdown of those who took the test nor their individual scores. The comparisons are being made on solely one set of standardised scores, which limits the conclusions that can be made. Moreover, there are only 4 races noted in the data: White, Black, Hispanic, and Asian. Cross cultural generalisability cannot be performed across other states or countries to races that have not been included. A noticeable problem in the data set is that some of the schools have missing information about SAT scores or race breakdowns. This limits the conclusions that can be drawn from the data since it has a broad scope but with gaps in the dataset. Another possible limitation is that the gender is not identified, which can be another cause of bias in the results. For instance, gender bias is a definite issue that can interfere with the data and cause skewing. To avoid such limitations, it is important for the dataset to be cleansed and erased of possibly biased numbers.
 
 ### Implications
 
-Assuming you answer your research questions, briefly describe the expected or possible implications for technologists, designers, and policymakers. (at least 150 words)
+Standardized testing continues to be an important part of students' lives and with our research, there can be many good implications depending on how the data allows for a change in people's perspectives. Standardised testing has many limitations within itself for many different students to be able to succeed on them, especially the SAT.  With our research, we intend to be able to give students an option that would help them do best during their exams. Additionally, our research can have an impact on the future of how people view standardised testing results which can allow students better opportunities to succeed based on their backgrounds. Schools can have a better understanding of why students perform the way they do or how their students are likely to perform on future tests. We hope to provide implications for those who are willing to make changes for students to do better based on their results and examine the future of what is best to do for standardised testing and the students.
 
 ### Limitations & Challenges
-What challenges or limitations might you need to address with your project idea more broadly? Briefly discuss. (at least 150 words)
+
+The SAT impacts the lives of students all over the country when they are applying to colleges, but our data only tracks students from New York. Thus, the trends we observe may not fully represent the issues with current standardised testing practices. Our data also only spans one year, which means it is more likely that anomalies could affect our analysis. Another issue is that our dataset does not report factors like household income and level of education of the students’ parents, which are factors likely to affect performance on standardised tests. We could use external income data for the different boroughs, but this would require aggregating data for dozens of schools and may not show trends in detail. Furthermore, the race breakdowns listed are based on the whole student body of the school, not just those who were tested. Therefore, it is possible that in schools with lower testing rates, the students who were tested are not representative of the overall demographics of the school. This could have an impact on the trends we observe and make it more difficult to recognise ways that the SAT discriminates against certain groups of students.
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+Analysis that we conducted showed that the mean SAT score among all the boroughs and races within New York City was 1275.907 and the median held a value of 1226. For a deeper dive into the data, we wanted to explore by interrogating the data through a real world phenomenon. In our national education system, there is evident racism and forms of bias that hamper with reported student scores. For instance, one area where the racial divide is seen is through the statistics of the maximum % of students tested and minimum % of students tested in an area. Within the % of max tested, 52.2% of the students were White whereas 1% were Black. Similarly, within the % of min tested, 2.25% were White and 52.325% were Black. This racial difference clearly identifies how a certain group is disadvantaged in the resources available for them to get tested, which later affects their educational opportunities in the future. A final summary that we calculated was to look at the average SAT scores within the highest and lowest student enrollment numbers. We found that students within the area that had max enrollment had an average score of 1896, whereas students in a school with min enrollment had a 0 average score. This signified that no one at the school was tested and goes to represent the importance of location and school facilities in providing for the student.
 
 ### Table
 
-Include a table of aggregate information
-
-Describe why you included the table and what information it reveals
+Here is a table of the Average SAT scores conducted from multiple cities, racial groups and enrollment numbers in New York City public schools between the year 2014 - 2015: 
+```{r echo = FALSE}
+source("table.R")
+kable(top.each.city)
+```
+The table provides information that is useful to understand how race and location play a role in average student SAT scores. The table is organized by city names and the divide between the White, Black, Hispanic and Asian population represents which group has the easiest access to test taking within their schools and areas. It is evident from the data that Asians are among the top test takers regardless of the location, which highlights the current stigma in minds that push Asians and STEM work together stronger than other races. Furthermore, the data set identified the cities within NYC that had especially higher / lower student enrollment rates. We used online research in coalition to understand how higher enrollment rated locations (eg. Forest Hills, Manhattan etc.) were more city destinations than smaller neighborhoods, that could provide the schools to conduct such testing.
 
 ### Chart 1
 
-Include a chart
-
-Describe why you chose this chart and what information it reveals
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+Chart 1: Average SAT Score vs % Tested (2014-2015)
+``````{r, echo = FALSE, code = readLines("chart1.R")}
+source("chart1.R")
+ggplot() +
+  geom_point(aes(x = Percent_Tested, y = Average_Score))
 ```
+The chart is a scatter plot that shows the average SAT score plotted against the % of students tested among all areas in New York City. There is an evident positive correlation between the number of students tested and the average SAT score. The higher the % of test takers in an area, the higher the SAT score which signifies how some locations can provide students resources that can improve their performances.  
 
 ### Chart 2
+``````{r, echo = FALSE, code = readLines("chart2.R")}
+source("chart2.R")
 
-Include a chart
+```
 
-Describe why you chose this chart and what information it reveals
 
 ### Chart 3
 

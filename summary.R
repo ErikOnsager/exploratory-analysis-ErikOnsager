@@ -25,7 +25,7 @@ summary_info$percent_black_of_min_tested <- mean(sat_data %>% filter(Percent.Tes
 
 summary_info$average_score_of_max_enrollment <- sat_data %>% filter(Student.Enrollment == max(Student.Enrollment, na.rm = TRUE)) %>% pull(average_total_score)
 
-#NA because noone at the smallest school took the sat
+#NA because none at the smallest school took the sat
 summary_info$average_score_of_min_enrollment <- sat_data %>% filter(Student.Enrollment == min(Student.Enrollment, na.rm = TRUE)) %>% pull(average_total_score)
 
 

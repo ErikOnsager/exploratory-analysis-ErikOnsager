@@ -1,7 +1,7 @@
 library(dplyr)
 library(kableExtra)
 
-data <- read.csv("./scores.csv")
+data <- read.csv("https://raw.githubusercontent.com/info-201b-wi22/exploratory-analysis-ErikOnsager/main/scores.csv?token=GHSAT0AAAAAABQLRLGJJP7QGPHDDPEVR4SMYQ4IHPQ")
 
 #adds a column that consolidates SAT subject scores into a single average
 data <- data %>% mutate(`Average SAT` = Average.Score..SAT.Math. + 
