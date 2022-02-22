@@ -15,7 +15,7 @@ Percent_White <- sat_data$Percent.White
 Average_Score <- sat_data$average_total_score
 
 ggplot(data = sat_data,mapping = aes(x = Percent_White, y = Average_Score, fill=`Percent Tested`)) +
-  geom_bar(stat = "identity", width = 0.75) +
+  geom_smooth() +
   labs(x = "\n Percent of White Students", y = "Average Score \n", title = "Average SAT Score By White Students \n") +
   theme(plot.title = element_text(hjust = 0), 
         axis.title.x = element_text (color="black", size = 10),
