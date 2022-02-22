@@ -95,7 +95,7 @@ The chart is a scatter plot that shows the average SAT score plotted against the
 
 ### Chart 2
 
-**Chart 2: Bar chart that shows the average SAT scores across the White students in NYC.** 
+**Chart 2: Line graph that shows the average SAT scores across the White students in NYC.** 
 ```{r, echo = FALSE, warning = FALSE, message=FALSE, code = readLines("chart2.R")}
 source("chart2.R")
 
